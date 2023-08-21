@@ -1,0 +1,4 @@
+http://localhost/Adoptatation/normaluser/ani_details.php?sno=186
+
+
+add card for animal
