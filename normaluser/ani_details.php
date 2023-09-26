@@ -114,7 +114,8 @@ if (isset($_GET['sno'])) {
 
     <!-- header section ends-->
 
- <section class="container details my-5 pt-5">
+   
+ <!-- <section class="container details my-5 pt-5">
     <div class="row mt-5">
               <div class="col-lg-5 col-md-12 col-12">
                   <img class="img-fluid w-50" src="../uploads/<?= $row['description']?>"/>
@@ -127,7 +128,7 @@ if (isset($_GET['sno'])) {
                         <input type="hidden" name="Ani_image" value="<?php echo $image; ?>">
                         <button type="submit" name="Addtocart">Add to Wishlist</button>
                     </form>
-                    <!-- Adopt Form -->
+                    
                     <form method="post" action="ani_details.php?sno=<?php echo $sno; ?>">
                         <input type="hidden" name="Ani_name" value="<?php echo $title; ?>">
                         <input type="hidden" name="Ani_image" value="<?php echo $image; ?>">
@@ -137,9 +138,29 @@ if (isset($_GET['sno'])) {
               
 
     </div>
+</section> -->
+<section class="adopt-sec">
+
+    <div class="card-container">
+        <div class="card-image">
+            <img src="../uploads/<?= $row['description']?>"/>
+        </div>
+        <div class="animal-detail">
+            <p><?php echo $title; ?></p> 
+            <p><?php echo $species; ?></p> 
+            <p><?php echo $breed; ?></p> 
+            <p><?php echo $age; ?></p> 
+            <p><?php echo $gender; ?></p> 
+            <p><?php echo $weight; ?></p> 
+            <p><?php echo $doctor_contact; ?></p> 
+            <p><?php echo $health_condition; ?></p> 
+            <p><?php echo $owner_contact; ?></p> 
+        </div>
+        <button class="adopt btn">Adopt Now</button>
+    </div>
 </section>
 
-
+            
    
    
     <!-- footer section starts  -->
