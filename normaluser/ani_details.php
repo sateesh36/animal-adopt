@@ -156,7 +156,11 @@ if (isset($_GET['sno'])) {
             <p><?php echo $health_condition; ?></p> 
             <p><?php echo $owner_contact; ?></p> 
         </div>
-        <button class="adopt btn">Adopt Now</button>
+        <form method="post" action="ani_details.php?sno=<?php echo $sno; ?>">
+                        <input type="hidden" name="Ani_name" value="<?php echo $title; ?>">
+                        <input type="hidden" name="Ani_image" value="<?php echo $image; ?>">
+                        <button class="btn" type="submit" name="Adoptnow">Adopt Now</button>
+                    </form>
     </div>
 </section>
 
