@@ -146,21 +146,30 @@ if (isset($_GET['sno'])) {
             <img src="../uploads/<?= $row['description']?>"/>
         </div>
         <div class="animal-detail">
-            <p><?php echo $title; ?></p> 
-            <p><?php echo $species; ?></p> 
-            <p><?php echo $breed; ?></p> 
-            <p><?php echo $age; ?></p> 
-            <p><?php echo $gender; ?></p> 
-            <p><?php echo $weight; ?></p> 
-            <p><?php echo $doctor_contact; ?></p> 
-            <p><?php echo $health_condition; ?></p> 
-            <p><?php echo $owner_contact; ?></p> 
+            <p>Name: <?php echo $title; ?></p> 
+            <p>Species: <?php echo $species; ?></p> 
+            <p>Breed <?php echo $breed; ?></p> 
+            <p>Age: <?php echo $age; ?></p> 
+            <p>Gender: <?php echo $gender; ?></p> 
+            <p>Weight: <?php echo $weight; ?></p> 
+            <p>Doctor-info: <?php echo $doctor_contact; ?></p> 
+            <p>Health: <?php echo $health_condition; ?></p> 
+            <p>Owner: <?php echo $owner_contact; ?></p> 
         </div>
-        <form method="post" action="ani_details.php?sno=<?php echo $sno; ?>">
-                        <input type="hidden" name="Ani_name" value="<?php echo $title; ?>">
-                        <input type="hidden" name="Ani_image" value="<?php echo $image; ?>">
-                        <button class="btn" type="submit" name="Adoptnow">Adopt Now</button>
-                    </form>
+        <div class="btns">
+
+            <form method="post" action="ani_details.php?sno=<?php echo $sno; ?>">
+                            <input type="hidden" name="Ani_name" value="<?php echo $title; ?>">
+                            <input type="hidden" name="Ani_image" value="<?php echo $image; ?>">
+                            <button class="btn adopt" type="submit" name="Adoptnow">Adopt Now</button>
+                        </form>
+    
+                        <form method="post" action="ani_details.php?sno=<?php echo $sno; ?>">
+                            <input type="hidden" name="Ani_name" value="<?php echo $title; ?>">
+                            <input type="hidden" name="Ani_image" value="<?php echo $image; ?>">
+                            <button class="btn wish" type="submit" name="Addtocart">Add to Wishlist</button>
+                        </form>
+        </div>
     </div>
 </section>
 
